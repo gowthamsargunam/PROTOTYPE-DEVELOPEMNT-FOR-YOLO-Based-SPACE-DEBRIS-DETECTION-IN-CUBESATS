@@ -10,7 +10,7 @@ Space Debris Detection Using Yolov5 Nano and A Streamlit Alert System for Debris
 
 ```
 # Check CUDA Availability
-```
+```python
 import torch
 print(torch.cuda.is_available())
 
@@ -22,4 +22,4 @@ model.conf = 0.1
 results = model('image.jpg')
 results.print()
 
-```
+
