@@ -1,7 +1,7 @@
 # PROTOTYPE-DEVELOPEMNT-FOR-YOLO-Based-SPACE-DEBRIS-DETECTION-IN-CUBESATS
 Space Debris Detection Using Yolov5 Nano and A Streamlit Alert System for Debris Detection
 
-# Installation - YOLOv5 and Torch (GPU Version)
+### Installation - YOLOv5 and Torch (GPU Version)
 
 ```
 !pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
@@ -9,13 +9,13 @@ Space Debris Detection Using Yolov5 Nano and A Streamlit Alert System for Debris
 !cd yolov5 && pip install -r requirements.txt
 
 ```
-# Check CUDA Availability
+### Check CUDA Availability
 ```python
 import torch
 print(torch.cuda.is_available())
 
 ```
-# Model Loading and Object Detection (to check the model working properly and object is detecting or not)
+### Model Loading and Object Detection (to check the model working properly and object is detecting or not)
 ```python
 model = torch.hub.load('ultralytics/yolov5', 'yolov5n') #a suggested model yolov5n(nano)
 model.conf = 0.1
@@ -49,12 +49,12 @@ cd labelImg
 python labelImg.py # using command or git prompt
 ```
 
-# Training the yolo model
+### Training the yolo model
 ```bash
 !cd yolov5 && python train.py --img 640 --batch 8 --epochs 100 --data dataset.yaml --weights yolov5n.pt --workers 2 --cache ram/disk
 
 ```
-# Load The Model
+### Load The Model
 ```python
 import torch
 model = torch.hub.load('ultralytics/yolov5', 'custom', path=r'C:\Users\Gowth\yolov5\runs\train\exp\weights\best.pt')
@@ -90,7 +90,7 @@ cap.release()
 cv2.destroyAllWindows()
 
 ```
-# Making a Streamlit Dashboard
+### Making a Streamlit Dashboard
 A python file was already created, named as "stream.py" and saved. To open the Dashboard for the Detection purpose to show detection events and detection logs as a Real-time Alerts
 
 to run that:
@@ -98,16 +98,3 @@ to run that:
 Run the Python file as:
 ```bash
 !streamlit run stem.py
-
-
-
-
-
-
-
-
-
-
-
-
-
