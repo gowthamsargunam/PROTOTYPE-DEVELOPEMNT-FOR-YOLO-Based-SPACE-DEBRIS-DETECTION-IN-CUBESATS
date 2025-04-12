@@ -97,4 +97,4 @@ to run that:
 
 Run the Python file as:
 ```bash
-!streamlit run stem.py
+!streamlit run stream.py
